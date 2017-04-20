@@ -1,11 +1,5 @@
 let state;       // Must declare state
 
-let button = document.getElementById('button');
-
-button.addEventListener('click', function() {
-  dispatch({ type: 'INCREASE_COUNT' });
-});
-
 function changeState(state = { count: 0 }, action) {
   switch (action.type) {
     case 'INCREASE_COUNT':
@@ -27,3 +21,10 @@ function render(){
 }
 
 dispatch({ type: '@@INIT' })
+
+// Click Event Handler
+let button = document.getElementById('button');
+
+button.addEventListener('click', function() {
+  dispatch({ type: 'INCREASE_COUNT' });
+});
